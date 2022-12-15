@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+@font-face {
+    font-family: 'Abdoullah';
+    src: url(../fonts/Abdoullah\ Ashgar\ EL-kharef\ Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(../images/backgroud.png) center;
+    background-size: cover;
+    
+}
+.content-box{
+    background-color: rgba(245, 247, 255, 0.85);
+    width: 1080px;
+    height: 656px;
+    border-radius: 10px;
+    margin: auto;
+    transform: translate(0px,10px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.left-side{
+    width:450px;
+    height: 536px;
+    margin: 60px;
+    box-shadow:0px 0px 5px 0px #a39f9f45
+}
+
+.left-side img{
+    width:450px;
+    height: 536px;
+    border-radius: 10px;
+}
+.right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+  
+}
+.right-side .text span{
+    font-family: Abdoullah ;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 120%;
+    color: #2D2D2D;
+} 
+.right-side .text p{
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size:  24px;
+    line-height: 160%;
+    color: #1F1249;
+    margin-top: 10px;
+
+}
+.right-side .form {
+    margin-top: 40px;
+}
+.right-side .form .input-field{position: relative;}
+.right-side .form .input-field input{
+    width: 450px;
+    background-color: #fff;
+    height: 60px;
+    border: 1px solid #DBE3FF;
+    padding: 0px 0px 0px 55px;;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+.right-side .form .input-field input:focus{
+    outline: 1px solid #1F1249;
+}
+.right-side .form .input-field input::placeholder{
+    height: 44px;
+    color: #3B3B3B;
+    font-family: 'Mulish';
+    margin-left: 90px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: capitalize;
+    
+}
+
+.right-side .form .input-field::after{
+  position: absolute;
+  left: 17px;
+    top: 17px;
+  color: #9CADF2;
+  font-family: 'Font Awesome 5 Free';
+  font-size:20px;
+  content: "\f007";
+  font-weight: 400; /* <-- add this or 400 for other styles */
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+
+}
+.right-side .form .input-field:nth-of-type(2)::after{content: "\f0e0";}
+.right-side .form .input-field:nth-of-type(3)::after,.right-side .form .input-field:nth-of-type(4)::after{content: "\f023"; font-weight: 600;}
+.right-side .form .input-field::before{
+    content: '';
+    position: absolute;
+    left: 46px;
+    top: 20px;
+    background-color: #DBE3FF;;
+    width: 1px;
+    height: 20px;
+    
+  
+  }
+.right-side .form .input-field span{ 
+    font-family: 'Mulish';
+    color: red;
+    font-size: 15px;
+    margin-bottom: 10px;
+
+}
+.right-side .form .input-field.success input{background-color: #e8f0fe;}
+.content-box.success{  height: 656px;};
+.right-side .form .input-field.error{margin-bottom: 10px;}
+.right-side .form .input-field.error input{outline: 1px solid red ;}
+.right-side .form .input-field.error span{display: block;}
+
+
+
+.right-side .form button{
+    padding: 0px 50px;
+    width: 450px;
+    height: 60px;
+    border: none;
+    background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
+    box-shadow: 0px 6px 18px #9CADF2;
+    border-radius: 10px;
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width:375px) {
+    body{background: rgba(245, 247, 255, 0.85) !important;}
+    .content-box{width: 315px; flex-direction: column;}
+    .left-side,.left-side img{width: 315px;height: 315px;}
+    .right-side { align-items: center;}
+    .right-side .text{text-align: center;}
+    .right-side .text span{font-size: 32px;}
+    .right-side .text p{font-size: 16px;width: 315px;}
+    .right-side .form .input-field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right-side .form .input-field input,.right-side .form  button{width: 315px;margin-bottom: 20px;}
+}
